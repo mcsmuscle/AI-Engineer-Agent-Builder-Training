@@ -102,3 +102,31 @@ based on previous data.](figure-1.2.png)
 - In addition to text completion, GPT-like LLMs can solve various tasks based on their inputs without needing retraining, finetuning, or task-specific model architecture changes. Sometimes, it is helpful to provide examples of the target within the input, which is known as a few-shot setting. However, GPT-like LLMs are also capable of carrying out tasks without a specific example, which is called zero-shot setting.
 
 ![alt text](image-5.png)
+
+## AI Engineering
+
+### Language models
+
+- The basic unit of language is the `token`, which can be a word, a subword, or even a character. LLMs process text by breaking it down into tokens and learning to predict the next token in a sequence based on the previous tokens.
+
+- For example, the sentence "The cat is on the mat" can be tokenized into individual words: ["The", "cat", "is", "on", "the", "mat"]. Each of these words is a token that the LLM would process to learn the structure and meaning of the sentence.
+
+- Another example of tokenization is breaking down a word into subwords. For instance, the word "unhappiness" can be tokenized into subwords: ["un", "happiness"]. This allows the LLM to understand the meaning of the word by recognizing its components.
+
+- GPT-4, a model behind ChatGPT, breaks the phrase “I can’t wait to build AI applications” into nine tokens. In this example the tokens are: ["I", "can", "’t", "wait", "to", "build", "AI", "applications"]. Each token represents a part of the text that the model processes to understand and generate language.
+
+![alt text](image-4.png)
+
+- The process of breaking the original text into tokens is called `tokenization`.
+
+- For GPT-4, an average token is approximately 3/4 the length of a word, so 100 tokens would be roughly equivalent to 75 words. However, the exact number of words that correspond to a given number of tokens can vary depending on the specific text and how it is tokenized.
+
+- The set of all tokens that a model can understand is called its `vocabulary`. The size of the vocabulary can vary widely between different models. Example vocabularies include:
+  - GPT-3: 50,000 tokens
+  - BERT: 30,000 tokens
+  - T5: 32,000 tokens
+
+- Why do language models use token as their unit instead of `word` or `character`?
+  1. Compared to characters, tokens allow the model to break words into meaningful components. For example, “cooking” can be broken into “cook” and “ing”, with both components carrying some meaning of the original word.
+  2. Because there are fewer unique tokens than unique words, this reduces the model’s vocabulary size, making the model more efficient.
+  3. Tokens also help the model process unknown words. For instance, a made-up word like “chatgpting” could be split into “chatgpt” and “ing”, helping the model understand its structure. Tokens balance having fewer units than words while retaining more meaning than individual characters.
