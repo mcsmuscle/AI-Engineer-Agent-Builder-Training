@@ -130,3 +130,33 @@ based on previous data.](figure-1.2.png)
   1. Compared to characters, tokens allow the model to break words into meaningful components. For example, “cooking” can be broken into “cook” and “ing”, with both components carrying some meaning of the original word.
   2. Because there are fewer unique tokens than unique words, this reduces the model’s vocabulary size, making the model more efficient.
   3. Tokens also help the model process unknown words. For instance, a made-up word like “chatgpting” could be split into “chatgpt” and “ing”, helping the model understand its structure. Tokens balance having fewer units than words while retaining more meaning than individual characters.
+
+## AI Agents and Applications
+
+### Building LLM-based applications and agents
+
+- `LLM-based applications`: They take in natural language input, work with unstructured data, pull in extra context from one or more sources, and then package everything into a prompt for the model to process.
+
+From a high level, these systems generally fall into three main categories:
+
+- LLM-based applications or engines – Systems that provide a specific capability such as summarization, search, or content generation.
+
+- Chatbots – Conversational interfaces that maintain context over multiple exchanges.
+
+- AI agents – Autonomous or semi-autonomous systems that use LLMs to
+  plan and execute multi-step tasks, often interacting with external tools or
+  APIs.
+
+### AI agents
+
+- An AI agent is a system that can autonomously perform tasks or make decisions based on its programming and the data it has access to. AI agents can range from simple rule-based systems to complex machine learning models that learn from data and adapt over time.
+
+- At each step, the agent consults the LLM to determine the next action, which could involve interacting with external tools, APIs, or databases to gather information or perform specific tasks. The agent then uses the output from the LLM to inform its next steps, allowing it to carry out complex tasks that require reasoning and decision-making.
+
+- This loop continues until the agent produces a complete solution.
+
+- For example, an AI agent designed to help with research might start by receiving a query from a user. It would then use the LLM to understand the query and determine what information is needed. The agent might then interact with external databases or APIs to gather relevant data, and use the LLM again to synthesize this information into a coherent response for the user. This process allows the agent to perform complex tasks that require understanding, reasoning, and interaction with external resources.
+
+- Workflow of an AI agent tasked with assembling holiday packages: An external client system sends a customized holiday request in natural language. The agent prompts the LLM to select tools and formulate queries in technology-specific formats. The agent executes the queries, gathers the results, and sends them back to the LLM, along with the original request, to obtain a comprehensive holiday package summary. Finally, the agent forwards the summarized package to the client system.
+
+![alt text](image-6.png)
